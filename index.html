@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div onclick="HideSidebar()" class="menu">
+      <div class="menu-wrapper">
+        <img
+          onclick="HideSidebar()"
+          src="./images/icon-close.svg"
+          alt=""
+          class="close-icon"
+        />
+
+        <div class="menu-item">
+          <a>Collections</a>
+          <a>Men</a>
+          <a>Women</a>
+          <a>About</a>
+          <a>Contact</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="header">
+      <div class="header-wrapper">
+        <div class="logo-name">
+          <img
+            onclick="sidebar()"
+            class="menu-img"
+            src="./images/icon-menu.svg"
+            alt=""
+          />
+          <img class="logo" src="./images/logo.svg" alt="" />
+        </div>
+
+        <div class="profile-cart">
+          <img
+            onclick="ShowCart()"
+            class="cart-img"
+            src="./images/icon-cart.svg"
+            alt=""
+          />
+          <img src="./images/image-avatar.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="img-changer">
+        <div class="previous">
+          <img src="./images/icon-previous.svg" class="prev-btn" onclick="prevSlide()" alt="" />
+        </div>
+
+        <div class="next">
+          <img src="./images/icon-next.svg" class="next-btn" onclick="nextSlide()" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="content-wrapper">
+        <p>Sneaker Company</p>
+        <h1 class="product-name">Fall Limited Edition Sneakers</h1>
+        <p>
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+
+        <div class="prd-rate">
+          <div class="rate">
+            <p>$125.00 <sub>50%</sub></p>
+          </div>
+          <div class="striked-rate">
+            <p><strike>$250.00</strike></p>
+          </div>
+        </div>
+
+        <div class="qty-button">
+          <div class="reduce"><img src="./images/icon-minus.svg" alt="" /></div>
+          <div class="count">0</div>
+          <div class="increase">
+            <img src="./images/icon-plus.svg" alt="" />
+          </div>
+        </div>
+
+        <div
+          data-name="Fall Limited Edition Sneakers"
+          data-price="125"
+          data-image="./images/image-product-1-thumbnail.jpg"
+          class="add-to-cart-btn"
+        >
+          <img src="./images/icon-cart.svg" alt="" />
+          <p>Add to cart</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart">
+      <div class="cart-wrapper">
+        <div class="cart-title">
+          <p>Cart</p>
+          <img onclick="HideCart()" src="./images/icon-close.svg" alt="" />
+        </div>
+
+        <div class="cart-list"></div>
+
+        <div class="check-out">
+          <div class="check-out-btn">check out</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>
